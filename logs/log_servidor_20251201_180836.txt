@@ -1,0 +1,43 @@
+=== LOG DO SERVIDOR OSINT ===
+Data/Hora: 2025-12-01 18:08:36
+=====================================
+
+[18:06:32] === SERVIDOR INICIADO ===
+[18:06:32] Aguardando conexões...
+[18:06:32] [TCP] Servidor TCP iniciado na porta 6789
+[18:06:32] [UDP] Servidor UDP iniciado na porta 9876
+[18:06:35] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:35] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:36] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:36] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:37] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:37] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:40] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:41] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:42] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:43] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:44] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:45] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:46] [TCP] ========================================
+[18:06:46] [TCP] RELATÓRIO RECEBIDO DE: 127.0.0.1
+[18:06:46] [TCP] === RELATÓRIO OSINT === | Timestamp: 2025-12-01 18:06:46 | Hostname: ZENNOpc | IP: 192.168.18.239 | Usuario: yluan | SO: Windows 10 10.0 | Java: 25 | Memoria: 43MB/258MB | CPUs: 16 | Home: C:\Users\yluan | Arquitetura: amd64
+[18:06:46] [TCP] ========================================
+[18:06:46] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:47] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:48] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:49] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:06:53] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:07:04] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:07:15] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:07:26] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:07:37] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:07:47] [TCP] 📁 Recebendo arquivo: TI_V_Slides-2.pdf (170,01 KB)
+[18:07:47] [TCP] ✅ Arquivo recebido: TI_V_Slides-2.pdf salvo em arquivos_recebidos/
+[18:07:48] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:07:58] [TCP] 📁 Recebendo arquivo: tia ildelia.png (4,45 MB)
+[18:07:58] [TCP] ✅ Arquivo recebido: tia ildelia.png salvo em arquivos_recebidos/
+[18:07:59] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:08:10] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:08:21] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:08:32] [UDP] 📡 PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[18:08:33] === SERVIDOR PARADO ===
