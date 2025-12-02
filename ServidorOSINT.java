@@ -14,8 +14,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ServidorOSINT extends JFrame {
     // Configurações
-    private static final int PORTA_TCP = 6789;
-    private static final int PORTA_UDP = 9876;
+    private static final int PORTA_TCP = 6700;
+    private static final int PORTA_UDP = 9111;
     private static final String PASTA_ARQUIVOS = "arquivos_recebidos";
     private static final String PASTA_LOGS = "logs";
 
