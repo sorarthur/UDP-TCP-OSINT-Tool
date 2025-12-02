@@ -584,4 +584,4 @@ javac ClienteOSINT.java
 
 **Aplicação desenvolvida para demonstrar comunicação TCP/UDP com multithreading, NAT e roteamento multi-hop.**
 
-**Boa sorte no trabalho! 🚀**
+
