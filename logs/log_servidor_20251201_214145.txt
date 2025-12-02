@@ -1,0 +1,14 @@
+=== LOG DO SERVIDOR OSINT ===
+Data/Hora: 2025-12-01 21:41:45
+=====================================
+
+[21:41:40] === SERVIDOR INICIADO ===
+[21:41:40] Aguardando conexões...
+[21:41:40] [TCP] Servidor TCP iniciado na porta 6789
+[21:41:40] [UDP] Servidor UDP iniciado na porta 9876
+[21:41:42] === SERVIDOR PARADO ===
+[21:41:43] === SERVIDOR INICIADO ===
+[21:41:43] Aguardando conexões...
+[21:41:43] [TCP] Servidor TCP iniciado na porta 6789
+[21:41:43] [UDP] Servidor UDP iniciado na porta 9876
+[21:41:44] === SERVIDOR PARADO ===
