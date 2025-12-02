@@ -1,0 +1,17 @@
+=== LOG DO SERVIDOR OSINT ===
+Data/Hora: 2025-12-01 23:05:17
+=====================================
+
+[23:04:36] === SERVIDOR INICIADO ===
+[23:04:36] Aguardando conexões...
+[23:04:36] [TCP] Servidor TCP iniciado na porta 6700
+[23:04:36] [UDP] Servidor UDP iniciado na porta 9111
+[23:05:02] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[23:05:05] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[23:05:06] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[23:05:07] [TCP] ========================================
+[23:05:07] [TCP] RELATÓRIO RECEBIDO DE: 127.0.0.1
+[23:05:07] [TCP] === RELATÓRIO OSINT === | Timestamp: 2025-12-01 23:05:07 | Hostname: ZENNOpc | IP: 192.168.18.239 | Usuario: yluan | SO: Windows 10 10.0 | Java: 25 | Memoria: 41MB/258MB | CPUs: 16 | Home: C:\Users\yluan | Arquitetura: amd64
+[23:05:07] [TCP] ========================================
+[23:05:13] [TCP] Recebendo arquivo: iago.jpg (133,10 KB)
+[23:05:13] [TCP] OK - Arquivo recebido: iago.jpg
