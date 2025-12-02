@@ -1,0 +1,51 @@
+=== LOG DO SERVIDOR OSINT ===
+Data/Hora: 2025-12-01 22:48:16
+=====================================
+
+[22:45:13] === SERVIDOR INICIADO ===
+[22:45:13] Aguardando conexões...
+[22:45:13] [TCP] Servidor TCP iniciado na porta 6789
+[22:45:13] [UDP] Servidor UDP iniciado na porta 9876
+[22:45:25] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:30] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:31] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:32] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:33] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:34] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:35] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:36] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:37] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:38] [TCP] ========================================
+[22:45:38] [TCP] RELATÓRIO RECEBIDO DE: 127.0.0.1
+[22:45:38] [TCP] === RELATÓRIO OSINT === | Timestamp: 2025-12-01 22:45:38 | Hostname: ZENNOpc | IP: 192.168.18.239 | Usuario: yluan | SO: Windows 10 10.0 | Java: 25 | Memoria: 35MB/258MB | CPUs: 16 | Home: C:\Users\yluan | Arquitetura: amd64
+[22:45:38] [TCP] ========================================
+[22:45:38] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:39] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:40] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:41] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:42] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:43] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:44] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:45] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:46] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:47] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:48] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:49] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:50] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:51] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:52] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:53] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:54] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:55] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:56] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:57] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:45:58] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:46:00] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:46:30] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:46:53] [TCP] Recebendo arquivo: iago.jpg (133,10 KB)
+[22:46:53] [TCP] OK - Arquivo recebido: iago.jpg
+[22:47:00] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:47:06] [TCP] Recebendo arquivo: ago.png (1,02 MB)
+[22:47:06] [TCP] OK - Arquivo recebido: ago.png
+[22:47:30] [UDP] PING de: 127.0.0.1 | HEARTBEAT - Sonda Ativa
+[22:47:41] === SERVIDOR PARADO ===
