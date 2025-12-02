@@ -24,6 +24,9 @@ public class ClienteOSINT extends JFrame {
     private static final Color COR_VERMELHO = new Color(244, 67, 54);
 
     // Componentes da GUI
+    private JTextField txtIpServidor;
+    private JTextField txtPortaTCP;
+    private JTextField txtPortaUDP;
     private JTextArea logArea;
     private JButton btnEnviarPing;
     private JButton btnEnviarRelatorio;
@@ -84,7 +87,7 @@ public class ClienteOSINT extends JFrame {
         PainelArredondado containerConfig = new PainelArredondado(20);
         containerConfig.setBackground(COR_CARD);
         containerConfig.setLayout(new BorderLayout());
-        containerConfig.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+        containerConfig.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         JLabel tituloConfig = new JLabel("Configuracao do Servidor");
         tituloConfig.setFont(new Font("Segoe UI", Font.BOLD, 14));
@@ -95,44 +98,68 @@ public class ClienteOSINT extends JFrame {
         JPanel painelConfig = new JPanel(new GridBagLayout());
         painelConfig.setOpaque(false);
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(5, 5, 5, 5);
+        gbc.insets = new Insets(8, 5, 8, 5);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
         // IP do Servidor
-        gbc.gridx = 0; gbc.gridy = 0;
+        gbc.gridx = 0; gbc.gridy = 0; gbc.weightx = 0;
         JLabel lblIp = new JLabel("IP do Servidor:");
         lblIp.setForeground(new Color(240, 240, 240));
         lblIp.setFont(new Font("Segoe UI", Font.BOLD, 13));
         painelConfig.add(lblIp, gbc);
-        gbc.gridx = 1;
-        JLabel lblIpValor = new JLabel("localhost");
-        lblIpValor.setForeground(new Color(100, 200, 255));
-        lblIpValor.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-        painelConfig.add(lblIpValor, gbc);
+        gbc.gridx = 1; gbc.weightx = 1.0;
+        txtIpServidor = new JTextField();
+        txtIpServidor.setText("localhost");
+        txtIpServidor.setFont(new Font("Consolas", Font.BOLD, 14));
+        txtIpServidor.setBackground(new Color(45, 45, 45));
+        txtIpServidor.setForeground(new Color(100, 200, 255));
+        txtIpServidor.setCaretColor(new Color(100, 200, 255));
+        txtIpServidor.setPreferredSize(new Dimension(200, 35));
+        txtIpServidor.setBorder(BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(new Color(100, 200, 255), 1),
+            BorderFactory.createEmptyBorder(6, 10, 6, 10)
+        ));
+        painelConfig.add(txtIpServidor, gbc);
 
         // Porta TCP
-        gbc.gridx = 0; gbc.gridy = 1;
+        gbc.gridx = 0; gbc.gridy = 1; gbc.weightx = 0;
         JLabel lblTcp = new JLabel("Porta TCP:");
         lblTcp.setForeground(new Color(240, 240, 240));
         lblTcp.setFont(new Font("Segoe UI", Font.BOLD, 13));
         painelConfig.add(lblTcp, gbc);
-        gbc.gridx = 1;
-        JLabel lblTcpValor = new JLabel(String.valueOf(PORTA_TCP_PADRAO));
-        lblTcpValor.setForeground(new Color(100, 200, 255));
-        lblTcpValor.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-        painelConfig.add(lblTcpValor, gbc);
+        gbc.gridx = 1; gbc.weightx = 1.0;
+        txtPortaTCP = new JTextField();
+        txtPortaTCP.setText(String.valueOf(PORTA_TCP_PADRAO));
+        txtPortaTCP.setFont(new Font("Consolas", Font.BOLD, 14));
+        txtPortaTCP.setBackground(new Color(45, 45, 45));
+        txtPortaTCP.setForeground(new Color(100, 200, 255));
+        txtPortaTCP.setCaretColor(new Color(100, 200, 255));
+        txtPortaTCP.setPreferredSize(new Dimension(200, 35));
+        txtPortaTCP.setBorder(BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(new Color(100, 200, 255), 1),
+            BorderFactory.createEmptyBorder(6, 10, 6, 10)
+        ));
+        painelConfig.add(txtPortaTCP, gbc);
 
         // Porta UDP
-        gbc.gridx = 0; gbc.gridy = 2;
+        gbc.gridx = 0; gbc.gridy = 2; gbc.weightx = 0;
         JLabel lblUdp = new JLabel("Porta UDP:");
         lblUdp.setForeground(new Color(240, 240, 240));
         lblUdp.setFont(new Font("Segoe UI", Font.BOLD, 13));
         painelConfig.add(lblUdp, gbc);
-        gbc.gridx = 1;
-        JLabel lblUdpValor = new JLabel(String.valueOf(PORTA_UDP_PADRAO));
-        lblUdpValor.setForeground(new Color(100, 200, 255));
-        lblUdpValor.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-        painelConfig.add(lblUdpValor, gbc);
+        gbc.gridx = 1; gbc.weightx = 1.0;
+        txtPortaUDP = new JTextField();
+        txtPortaUDP.setText(String.valueOf(PORTA_UDP_PADRAO));
+        txtPortaUDP.setFont(new Font("Consolas", Font.BOLD, 14));
+        txtPortaUDP.setBackground(new Color(45, 45, 45));
+        txtPortaUDP.setForeground(new Color(100, 200, 255));
+        txtPortaUDP.setCaretColor(new Color(100, 200, 255));
+        txtPortaUDP.setPreferredSize(new Dimension(200, 35));
+        txtPortaUDP.setBorder(BorderFactory.createCompoundBorder(
+            BorderFactory.createLineBorder(new Color(100, 200, 255), 1),
+            BorderFactory.createEmptyBorder(6, 10, 6, 10)
+        ));
+        painelConfig.add(txtPortaUDP, gbc);
 
         containerConfig.add(tituloConfig, BorderLayout.NORTH);
         containerConfig.add(painelConfig, BorderLayout.CENTER);
@@ -348,13 +375,23 @@ public class ClienteOSINT extends JFrame {
         containerLog.add(scrollPane, BorderLayout.CENTER);
 
         // Painel de configurações (coluna esquerda)
-        JPanel painelConfigs = new JPanel(new GridLayout(4, 1, 0, 15));
+        JPanel painelConfigs = new JPanel(new GridBagLayout());
         painelConfigs.setBackground(COR_FUNDO);
         painelConfigs.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 10));
-        painelConfigs.add(containerConfig);
-        painelConfigs.add(containerHeartbeat);
-        painelConfigs.add(containerOpcoes);
-        painelConfigs.add(containerAcoes);
+
+        GridBagConstraints gbcMain = new GridBagConstraints();
+        gbcMain.gridx = 0;
+        gbcMain.fill = GridBagConstraints.BOTH;
+        gbcMain.weightx = 1.0;
+        gbcMain.insets = new Insets(0, 0, 15, 0);
+        gbcMain.gridy = 0; gbcMain.weighty = 0.8;
+        painelConfigs.add(containerConfig, gbcMain);
+        gbcMain.gridy = 1; gbcMain.weighty = 1.2;
+        painelConfigs.add(containerHeartbeat, gbcMain);
+        gbcMain.gridy = 2; gbcMain.weighty = 0.5;
+        painelConfigs.add(containerOpcoes, gbcMain);
+        gbcMain.gridy = 3; gbcMain.weighty = 1.5;
+        painelConfigs.add(containerAcoes, gbcMain);
 
         // Painel de log (coluna direita)
         JPanel painelLog = new JPanel(new BorderLayout());
@@ -428,8 +465,8 @@ public class ClienteOSINT extends JFrame {
     private void enviarPingUDP() {
         new Thread(() -> {
             try {
-                String ip = "localhost";
-                int porta = PORTA_UDP_PADRAO;
+                String ip = txtIpServidor.getText().trim();
+                int porta = Integer.parseInt(txtPortaUDP.getText().trim());
 
                 if (!heartbeatAtivo) {
                     atualizarStatus("Enviando PING...", Color.ORANGE);
@@ -461,8 +498,8 @@ public class ClienteOSINT extends JFrame {
     private void enviarRelatorioTCP() {
         new Thread(() -> {
             try {
-                String ip = "localhost";
-                int porta = PORTA_TCP_PADRAO;
+                String ip = txtIpServidor.getText().trim();
+                int porta = Integer.parseInt(txtPortaTCP.getText().trim());
 
                 atualizarStatus("Enviando RELATÓRIO...", Color.ORANGE);
                 log("[TCP] Conectando ao servidor...");
@@ -509,8 +546,8 @@ public class ClienteOSINT extends JFrame {
 
             new Thread(() -> {
                 try {
-                    String ip = "localhost";
-                    int porta = PORTA_TCP_PADRAO;
+                    String ip = txtIpServidor.getText().trim();
+                    int porta = Integer.parseInt(txtPortaTCP.getText().trim());
 
                     atualizarStatus("Enviando arquivo...", Color.ORANGE);
                     log("[TCP] Enviando arquivo: " + arquivo.getName() + " (" + formatarTamanho(arquivo.length()) + ")");
