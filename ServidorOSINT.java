@@ -69,37 +69,37 @@ public class ServidorOSINT extends JFrame {
 
     private void configurarGUI() {
         setTitle("SERVIDOR OSINT");
-        setSize(1150, 850);
+        setSize(1000, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(0, 0));
         getContentPane().setBackground(COR_FUNDO);
-        setMinimumSize(new Dimension(1000, 700));
+        setMinimumSize(new Dimension(900, 650));
 
         // Painel superior com GRADIENTE
         JPanel painelTopo = new PainelGradiente(
             new Color(26, 35, 126),
             new Color(13, 71, 161)
         );
-        painelTopo.setLayout(new GridLayout(3, 1, 0, 5));
-        painelTopo.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
+        painelTopo.setLayout(new GridLayout(3, 1, 0, 3));
+        painelTopo.setBorder(BorderFactory.createEmptyBorder(18, 20, 18, 20));
 
         JLabel titulo = new JLabel("SERVIDOR OSINT", SwingConstants.CENTER);
-        titulo.setFont(new Font("Segoe UI", Font.BOLD, 28));
+        titulo.setFont(new Font("Segoe UI", Font.BOLD, 24));
         titulo.setForeground(Color.WHITE);
 
         JLabel subtitulo = new JLabel("Central de Monitoramento e Controle", SwingConstants.CENTER);
-        subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         subtitulo.setForeground(new Color(200, 200, 255));
 
         JPanel panelInfo = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 0));
         panelInfo.setOpaque(false);
 
         statusLabel = new JLabel("PARADO", SwingConstants.CENTER);
-        statusLabel.setFont(new Font("Segoe UI", Font.BOLD, 16));
+        statusLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
         statusLabel.setForeground(new Color(255, 235, 59));
 
         JLabel infoPortas = new JLabel("TCP:" + PORTA_TCP + " | UDP:" + PORTA_UDP);
-        infoPortas.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+        infoPortas.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         infoPortas.setForeground(new Color(180, 180, 220));
 
         panelInfo.add(statusLabel);
@@ -111,8 +111,8 @@ public class ServidorOSINT extends JFrame {
         painelTopo.add(panelInfo);
 
         // Painel de estatísticas com CARDS ELEVADOS
-        JPanel painelStats = new JPanel(new GridLayout(1, 4, 20, 0));
-        painelStats.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        JPanel painelStats = new JPanel(new GridLayout(1, 4, 15, 0));
+        painelStats.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
         painelStats.setBackground(COR_FUNDO);
 
         lblTotalPings = criarLabelStat("0");
@@ -168,7 +168,7 @@ public class ServidorOSINT extends JFrame {
         JScrollPane scrollTabela = new JScrollPane(tabelaClientes);
         scrollTabela.setBorder(BorderFactory.createEmptyBorder());
         scrollTabela.setBackground(COR_CARD);
-        scrollTabela.setPreferredSize(new Dimension(0, 150));
+        scrollTabela.setPreferredSize(new Dimension(0, 130));
 
         PainelArredondado containerTabela = new PainelArredondado(20);
         containerTabela.setBackground(COR_CARD);
@@ -186,12 +186,12 @@ public class ServidorOSINT extends JFrame {
         // Área de log
         logArea = new JTextArea();
         logArea.setEditable(false);
-        logArea.setFont(new Font("JetBrains Mono", Font.PLAIN, 13));
+        logArea.setFont(new Font("JetBrains Mono", Font.PLAIN, 12));
         logArea.setBackground(new Color(15, 15, 15));
         logArea.setForeground(new Color(0, 255, 0));
         logArea.setLineWrap(true);
         logArea.setWrapStyleWord(true);
-        logArea.setMargin(new Insets(15, 15, 15, 15));
+        logArea.setMargin(new Insets(12, 12, 12, 12));
 
         JScrollPane scrollPane = new JScrollPane(logArea);
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
@@ -210,14 +210,14 @@ public class ServidorOSINT extends JFrame {
         containerLog.add(scrollPane, BorderLayout.CENTER);
 
         // Painel central
-        JPanel painelCentral = new JPanel(new BorderLayout(0, 15));
+        JPanel painelCentral = new JPanel(new BorderLayout(0, 12));
         painelCentral.setBackground(COR_FUNDO);
-        painelCentral.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 20));
+        painelCentral.setBorder(BorderFactory.createEmptyBorder(0, 15, 0, 15));
         painelCentral.add(containerTabela, BorderLayout.NORTH);
         painelCentral.add(containerLog, BorderLayout.CENTER);
 
         // Painel de controle com BOTÕES MODERNOS
-        JPanel painelControle = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 20));
+        JPanel painelControle = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 15));
         painelControle.setBackground(COR_FUNDO);
 
         btnIniciar = criarBotaoModerno("INICIAR", COR_VERDE);
@@ -309,12 +309,12 @@ public class ServidorOSINT extends JFrame {
                 }
             }
         };
-        btn.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        btn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         btn.setBackground(cor);
         btn.setForeground(Color.WHITE);
         btn.setFocusPainted(false);
         btn.setBorderPainted(false);
-        btn.setPreferredSize(new Dimension(180, 50));
+        btn.setPreferredSize(new Dimension(160, 45));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         // EFEITO HOVER (apenas quando habilitado)
@@ -341,7 +341,7 @@ public class ServidorOSINT extends JFrame {
 
     private JLabel criarLabelStat(String valor) {
         JLabel label = new JLabel(valor);
-        label.setFont(new Font("Segoe UI", Font.BOLD, 48));
+        label.setFont(new Font("Segoe UI", Font.BOLD, 42));
         label.setHorizontalAlignment(SwingConstants.CENTER);
         label.setForeground(Color.WHITE);
         return label;
@@ -351,18 +351,18 @@ public class ServidorOSINT extends JFrame {
         PainelArredondado card = new PainelArredondado(20);
         card.setBackground(COR_CARD);
         card.setLayout(new BorderLayout(10, 10));
-        card.setBorder(BorderFactory.createEmptyBorder(25, 20, 20, 20));
-        card.setPreferredSize(new Dimension(250, 150));
+        card.setBorder(BorderFactory.createEmptyBorder(20, 15, 15, 15));
+        card.setPreferredSize(new Dimension(220, 130));
 
         JLabel lblIcone = new JLabel(icone);
-        lblIcone.setFont(new Font("Segoe UI", Font.BOLD, 28));
+        lblIcone.setFont(new Font("Segoe UI", Font.BOLD, 24));
         lblIcone.setHorizontalAlignment(SwingConstants.CENTER);
         lblIcone.setVerticalAlignment(SwingConstants.CENTER);
         lblIcone.setForeground(corDestaque);
-        lblIcone.setBorder(BorderFactory.createEmptyBorder(10, 0, 5, 0));
+        lblIcone.setBorder(BorderFactory.createEmptyBorder(5, 0, 3, 0));
 
         JLabel lblTitulo = new JLabel(titulo);
-        lblTitulo.setFont(new Font("Segoe UI", Font.BOLD, 13));
+        lblTitulo.setFont(new Font("Segoe UI", Font.BOLD, 12));
         lblTitulo.setForeground(new Color(220, 220, 220));
         lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 
