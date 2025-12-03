@@ -48,33 +48,33 @@ public class ClienteOSINT extends JFrame {
 
     private void configurarGUI() {
         setTitle("CLIENTE OSINT - Sonda Remota");
-        setSize(1100, 900);
+        setSize(950, 750);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(0, 0));
         getContentPane().setBackground(COR_FUNDO);
-        setMinimumSize(new Dimension(1000, 700));
+        setMinimumSize(new Dimension(850, 600));
 
         // Painel superior com GRADIENTE (laranja/vermelho - diferente do servidor)
         JPanel painelTopo = new PainelGradiente(
             new Color(230, 74, 25),  // Laranja escuro
             new Color(179, 55, 113)  // Magenta
         );
-        painelTopo.setLayout(new GridLayout(3, 1, 0, 5));
-        painelTopo.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
+        painelTopo.setLayout(new GridLayout(3, 1, 0, 3));
+        painelTopo.setBorder(BorderFactory.createEmptyBorder(18, 20, 18, 20));
 
         JLabel titulo = new JLabel("SONDA OSINT - CLIENTE", SwingConstants.CENTER);
-        titulo.setFont(new Font("Segoe UI", Font.BOLD, 28));
+        titulo.setFont(new Font("Segoe UI", Font.BOLD, 24));
         titulo.setForeground(Color.WHITE);
 
         JLabel subtitulo = new JLabel("Sistema de Coleta e Transmissao de Dados", SwingConstants.CENTER);
-        subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         subtitulo.setForeground(new Color(255, 200, 200));
 
         JPanel panelInfo = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 0));
         panelInfo.setOpaque(false);
 
         statusLabel = new JLabel("PRONTO", SwingConstants.CENTER);
-        statusLabel.setFont(new Font("Segoe UI", Font.BOLD, 16));
+        statusLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
         statusLabel.setForeground(COR_VERDE);
 
         panelInfo.add(statusLabel);
@@ -87,7 +87,7 @@ public class ClienteOSINT extends JFrame {
         PainelArredondado containerConfig = new PainelArredondado(20);
         containerConfig.setBackground(COR_CARD);
         containerConfig.setLayout(new BorderLayout());
-        containerConfig.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        containerConfig.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
 
         JLabel tituloConfig = new JLabel("Configuracao do Servidor");
         tituloConfig.setFont(new Font("Segoe UI", Font.BOLD, 14));
@@ -98,7 +98,7 @@ public class ClienteOSINT extends JFrame {
         JPanel painelConfig = new JPanel(new GridBagLayout());
         painelConfig.setOpaque(false);
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(8, 5, 8, 5);
+        gbc.insets = new Insets(5, 5, 5, 5);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
         // IP do Servidor
@@ -110,14 +110,14 @@ public class ClienteOSINT extends JFrame {
         gbc.gridx = 1; gbc.weightx = 1.0;
         txtIpServidor = new JTextField();
         txtIpServidor.setText("localhost");
-        txtIpServidor.setFont(new Font("Consolas", Font.BOLD, 14));
+        txtIpServidor.setFont(new Font("Consolas", Font.BOLD, 13));
         txtIpServidor.setBackground(new Color(45, 45, 45));
         txtIpServidor.setForeground(new Color(100, 200, 255));
         txtIpServidor.setCaretColor(new Color(100, 200, 255));
-        txtIpServidor.setPreferredSize(new Dimension(200, 35));
+        txtIpServidor.setPreferredSize(new Dimension(180, 32));
         txtIpServidor.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(new Color(100, 200, 255), 1),
-            BorderFactory.createEmptyBorder(6, 10, 6, 10)
+            BorderFactory.createEmptyBorder(5, 8, 5, 8)
         ));
         painelConfig.add(txtIpServidor, gbc);
 
@@ -130,14 +130,14 @@ public class ClienteOSINT extends JFrame {
         gbc.gridx = 1; gbc.weightx = 1.0;
         txtPortaTCP = new JTextField();
         txtPortaTCP.setText(String.valueOf(PORTA_TCP_PADRAO));
-        txtPortaTCP.setFont(new Font("Consolas", Font.BOLD, 14));
+        txtPortaTCP.setFont(new Font("Consolas", Font.BOLD, 13));
         txtPortaTCP.setBackground(new Color(45, 45, 45));
         txtPortaTCP.setForeground(new Color(100, 200, 255));
         txtPortaTCP.setCaretColor(new Color(100, 200, 255));
-        txtPortaTCP.setPreferredSize(new Dimension(200, 35));
+        txtPortaTCP.setPreferredSize(new Dimension(180, 32));
         txtPortaTCP.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(new Color(100, 200, 255), 1),
-            BorderFactory.createEmptyBorder(6, 10, 6, 10)
+            BorderFactory.createEmptyBorder(5, 8, 5, 8)
         ));
         painelConfig.add(txtPortaTCP, gbc);
 
@@ -150,14 +150,14 @@ public class ClienteOSINT extends JFrame {
         gbc.gridx = 1; gbc.weightx = 1.0;
         txtPortaUDP = new JTextField();
         txtPortaUDP.setText(String.valueOf(PORTA_UDP_PADRAO));
-        txtPortaUDP.setFont(new Font("Consolas", Font.BOLD, 14));
+        txtPortaUDP.setFont(new Font("Consolas", Font.BOLD, 13));
         txtPortaUDP.setBackground(new Color(45, 45, 45));
         txtPortaUDP.setForeground(new Color(100, 200, 255));
         txtPortaUDP.setCaretColor(new Color(100, 200, 255));
-        txtPortaUDP.setPreferredSize(new Dimension(200, 35));
+        txtPortaUDP.setPreferredSize(new Dimension(180, 32));
         txtPortaUDP.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(new Color(100, 200, 255), 1),
-            BorderFactory.createEmptyBorder(6, 10, 6, 10)
+            BorderFactory.createEmptyBorder(5, 8, 5, 8)
         ));
         painelConfig.add(txtPortaUDP, gbc);
 
@@ -225,13 +225,13 @@ public class ClienteOSINT extends JFrame {
                 }
             }
         };
-        btnIniciarHeartbeat.setFont(new Font("Segoe UI", Font.BOLD, 13));
+        btnIniciarHeartbeat.setFont(new Font("Segoe UI", Font.BOLD, 12));
         btnIniciarHeartbeat.setBackground(new Color(46, 204, 113));
         btnIniciarHeartbeat.setForeground(Color.WHITE);
         btnIniciarHeartbeat.setFocusPainted(false);
         btnIniciarHeartbeat.setBorderPainted(false);
         btnIniciarHeartbeat.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        btnIniciarHeartbeat.setPreferredSize(new Dimension(200, 40));
+        btnIniciarHeartbeat.setPreferredSize(new Dimension(180, 36));
         btnIniciarHeartbeat.addActionListener(e -> iniciarHeartbeat());
 
         btnPararHeartbeat = new JButton("PARAR HEARTBEAT") {
@@ -246,13 +246,13 @@ public class ClienteOSINT extends JFrame {
                 }
             }
         };
-        btnPararHeartbeat.setFont(new Font("Segoe UI", Font.BOLD, 13));
+        btnPararHeartbeat.setFont(new Font("Segoe UI", Font.BOLD, 12));
         btnPararHeartbeat.setBackground(new Color(231, 76, 60));
         btnPararHeartbeat.setForeground(Color.WHITE);
         btnPararHeartbeat.setFocusPainted(false);
         btnPararHeartbeat.setBorderPainted(false);
         btnPararHeartbeat.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        btnPararHeartbeat.setPreferredSize(new Dimension(200, 40));
+        btnPararHeartbeat.setPreferredSize(new Dimension(180, 36));
         btnPararHeartbeat.setEnabled(false);
         btnPararHeartbeat.addActionListener(e -> pararHeartbeat());
 
@@ -288,12 +288,12 @@ public class ClienteOSINT extends JFrame {
         containerOpcoes.add(painelOpcoes, BorderLayout.CENTER);
 
         // Painel de ações
-        JPanel painelAcoes = new JPanel(new GridLayout(2, 2, 10, 10));
-        painelAcoes.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        JPanel painelAcoes = new JPanel(new GridLayout(2, 2, 8, 8));
+        painelAcoes.setBorder(BorderFactory.createEmptyBorder(8, 8, 8, 8));
         painelAcoes.setBackground(new Color(30, 30, 30));
 
         btnEnviarPing = new JButton("ENVIAR PING (UDP)");
-        btnEnviarPing.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        btnEnviarPing.setFont(new Font("Segoe UI", Font.BOLD, 12));
         btnEnviarPing.setBackground(new Color(52, 152, 219));
         btnEnviarPing.setForeground(Color.WHITE);
         btnEnviarPing.setFocusPainted(false);
@@ -302,7 +302,7 @@ public class ClienteOSINT extends JFrame {
         btnEnviarPing.addActionListener(e -> enviarPingUDP());
 
         btnEnviarRelatorio = new JButton("ENVIAR RELATORIO (TCP)");
-        btnEnviarRelatorio.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        btnEnviarRelatorio.setFont(new Font("Segoe UI", Font.BOLD, 12));
         btnEnviarRelatorio.setBackground(new Color(46, 204, 113));
         btnEnviarRelatorio.setForeground(Color.WHITE);
         btnEnviarRelatorio.setFocusPainted(false);
@@ -311,7 +311,7 @@ public class ClienteOSINT extends JFrame {
         btnEnviarRelatorio.addActionListener(e -> enviarRelatorioTCP());
 
         btnEnviarArquivo = new JButton("ENVIAR ARQUIVO (TCP)");
-        btnEnviarArquivo.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        btnEnviarArquivo.setFont(new Font("Segoe UI", Font.BOLD, 12));
         btnEnviarArquivo.setBackground(new Color(155, 89, 182));
         btnEnviarArquivo.setForeground(Color.WHITE);
         btnEnviarArquivo.setFocusPainted(false);
@@ -320,7 +320,7 @@ public class ClienteOSINT extends JFrame {
         btnEnviarArquivo.addActionListener(e -> enviarArquivo());
 
         JButton btnLimparLog = new JButton("LIMPAR LOG");
-        btnLimparLog.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        btnLimparLog.setFont(new Font("Segoe UI", Font.BOLD, 12));
         btnLimparLog.setBackground(new Color(149, 165, 166));
         btnLimparLog.setForeground(Color.WHITE);
         btnLimparLog.setFocusPainted(false);
@@ -350,12 +350,12 @@ public class ClienteOSINT extends JFrame {
         // Área de log
         logArea = new JTextArea();
         logArea.setEditable(false);
-        logArea.setFont(new Font("JetBrains Mono", Font.PLAIN, 13));
+        logArea.setFont(new Font("JetBrains Mono", Font.PLAIN, 12));
         logArea.setBackground(new Color(15, 15, 15));
         logArea.setForeground(new Color(0, 255, 255)); // Ciano
         logArea.setLineWrap(true);
         logArea.setWrapStyleWord(true);
-        logArea.setMargin(new Insets(15, 15, 15, 15));
+        logArea.setMargin(new Insets(12, 12, 12, 12));
 
         JScrollPane scrollPane = new JScrollPane(logArea);
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
@@ -377,30 +377,30 @@ public class ClienteOSINT extends JFrame {
         // Painel de configurações (coluna esquerda)
         JPanel painelConfigs = new JPanel(new GridBagLayout());
         painelConfigs.setBackground(COR_FUNDO);
-        painelConfigs.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 10));
+        painelConfigs.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 8));
 
         GridBagConstraints gbcMain = new GridBagConstraints();
         gbcMain.gridx = 0;
         gbcMain.fill = GridBagConstraints.BOTH;
         gbcMain.weightx = 1.0;
-        gbcMain.insets = new Insets(0, 0, 15, 0);
-        gbcMain.gridy = 0; gbcMain.weighty = 0.8;
+        gbcMain.insets = new Insets(0, 0, 10, 0);
+        gbcMain.gridy = 0; gbcMain.weighty = 0.6;
         painelConfigs.add(containerConfig, gbcMain);
-        gbcMain.gridy = 1; gbcMain.weighty = 1.2;
+        gbcMain.gridy = 1; gbcMain.weighty = 1.0;
         painelConfigs.add(containerHeartbeat, gbcMain);
-        gbcMain.gridy = 2; gbcMain.weighty = 0.5;
+        gbcMain.gridy = 2; gbcMain.weighty = 0.4;
         painelConfigs.add(containerOpcoes, gbcMain);
-        gbcMain.gridy = 3; gbcMain.weighty = 1.5;
+        gbcMain.gridy = 3; gbcMain.weighty = 1.3;
         painelConfigs.add(containerAcoes, gbcMain);
 
         // Painel de log (coluna direita)
         JPanel painelLog = new JPanel(new BorderLayout());
         painelLog.setBackground(COR_FUNDO);
-        painelLog.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 20));
+        painelLog.setBorder(BorderFactory.createEmptyBorder(15, 8, 15, 15));
         painelLog.add(containerLog, BorderLayout.CENTER);
 
         // Painel principal com layout de 2 colunas
-        JPanel painelPrincipal = new JPanel(new GridLayout(1, 2, 15, 0));
+        JPanel painelPrincipal = new JPanel(new GridLayout(1, 2, 10, 0));
         painelPrincipal.setBackground(COR_FUNDO);
         painelPrincipal.add(painelConfigs);
         painelPrincipal.add(painelLog);
